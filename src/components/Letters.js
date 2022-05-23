@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Letters = () => {
 	let alphabetArray = [];
@@ -15,8 +15,6 @@ const Letters = () => {
 		const letter = e.target.value;
 		setNewLetter(letter);
 		guessed.push(letter);
-		const newGuessed = guessed.slice();
-		console.log(newGuessed);
 		setGuessed(guessed.slice());
 	};
 
