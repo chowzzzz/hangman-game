@@ -1,0 +1,79 @@
+/* #longRod,
+#bottomRod,
+#topRod,
+#string,
+#head,
+#body,
+#leftLeg,
+#rightLeg,
+#leftArm,
+#rightArm {
+	transition: all 1s ease;
+} */
+
+#man {
+	display: none;
+}
+
+#rod {
+	animation: bounce 1s;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-30%);
+	}
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-10%);
+	}
+	60% {
+		transform: translateY(-5%);
+	}
+}
+
+.letter {
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#pencil {
+	position: absolute;
+	animation: bounceAndFadeOut 1s;
+	opacity: 0;
+}
+
+@keyframes bounceAndFadeOut {
+	0% {
+		transform: translateY(-60%);
+		opacity: 1;
+	}
+	20%,
+	60%,
+	80% {
+		transform: translateY(-10%);
+	}
+	40% {
+		transform: translateY(-50%);
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+}
