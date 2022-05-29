@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Hangman from "./components/Hangman";
 import Letters from "./components/Letters";
 import Fail from "./components/Fail";
+import Win from "./components/Win";
 
 function App() {
 	const [showSuccess, setShowSuccess] = useState(false);
@@ -15,11 +16,9 @@ function App() {
 			{!showFail && !showSuccess &&
 				<Hangman mistakes={mistakes}/>
 			}
-			{showFail && <Fail/>}
-			{/* {showSuccess && <Success />} */}
+			{showFail && <Fail />}
+			{showSuccess && <Win />}
 			<div className="letters">
-
-
 				<Letters setShowFail={setShowFail} setShowSuccess={setShowSuccess} setMistakes={setMistakes}/>
 			</div>
 		</div>

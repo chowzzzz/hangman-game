@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Hangman Game ☠️☠️☠️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### TikTok Youth Camp 2022 Front-End Development Group Project
 
-## Available Scripts
+Just a hangman game made with ReactJS.
 
-In the project directory, you can run:
+Supports mobile, tablet and desktop viewports.
 
-### `npm start`
+## Table of Content :scroll:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   [Getting Started](#getting-started-book)
+-   [Tech-stack](#tech-stack-computer)
+-   [Links](#links-link)
+-   [Screenshots](#screenshots-camera)
+-   [The Team](#the-team-man_technologist-woman_technologist)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started :book:
 
-### `npm test`
+1. Clone repo to your local machine
+2. Run `npm install`
+3. Run `npm start`
+4. The app should open up in [http://localhost:3000](http://localhost:3000)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech-stack :computer:
 
-### `npm run build`
+-   ReactJS
+-   Bootstrap
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Links :link:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+View our demo video here: [REPLACE WITH DEMO VIDEO LINK]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Find the game on Github [here](https://github.com/chowzzzz/hangman-game)
 
-### `npm run eject`
+We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.netlify.app)!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots :camera:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![localhost_3000_](https://user-images.githubusercontent.com/38778609/170871404-8cf85bcd-39ab-43e5-bf92-28f08a9c502f.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Hangman ☠️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![hangman]()
 
-## Learn More
+### You won! 😄
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![win]()
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### You lost! 😫
 
-### Code Splitting
+![lose]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Mobile
 
-### Analyzing the Bundle Size
+<img src="https://user-images.githubusercontent.com/38778609/170871365-3501764f-cd09-44b3-91d5-e587a552def8.png" width="250">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Tablet
 
-### Making a Progressive Web App
+<img src="https://user-images.githubusercontent.com/38778609/170871347-5b21b8a2-e7c4-44e1-b2f3-3adac2653686.png" width="700">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## The Team :man_technologist: :woman_technologist:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   [Mok Xiao Fan](https://github.com/chowzzzz)
+-   [BeiNing Li](https://github.com/dearvae)
+-   [Laksmi Sujeesh](https://github.com/lakshmi-sujeesh)
+-   [Swee En](https://github.com/lse02)
+-   [Jonathan](https://github.com/wutdequack)
