@@ -5,6 +5,7 @@ const Letters = (props) => {
 	let maxWrongs = 6;
 	let alphabetArray = [];
 	var randomWords = require('random-words');
+
 	const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	alphabetArray = alphabets.split("");
 
@@ -30,7 +31,14 @@ const Letters = (props) => {
 	useEffect(() => {
 		// setAnswer(getRandomWord);
 		setAnswer(randomWords());
+
 	}, []);
+
+	useEffect(() => {
+
+		props.setWord(answer)
+
+	}, [answer]);
 
 	useEffect(() => {
 		if (guessed.size > 0) {
