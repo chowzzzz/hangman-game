@@ -11,10 +11,6 @@
 	transition: all 1s ease;
 } */
 
-#man {
-	display: none;
-}
-
 #rod {
 	animation: bounce 1s;
 }
