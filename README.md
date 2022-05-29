@@ -52,12 +52,11 @@ We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.ne
 
 ### Mobile
 
-![localhost_3000_(iPhone 12 Pro)](https://user-images.githubusercontent.com/38778609/170871365-3501764f-cd09-44b3-91d5-e587a552def8.png)
+<img src="https://user-images.githubusercontent.com/38778609/170871365-3501764f-cd09-44b3-91d5-e587a552def8.png" width="250">
 
 ### Tablet
 
-![localhost_3000_(iPad Air)](https://user-images.githubusercontent.com/38778609/170871347-5b21b8a2-e7c4-44e1-b2f3-3adac2653686.png)
-
+<img src="https://user-images.githubusercontent.com/38778609/170871347-5b21b8a2-e7c4-44e1-b2f3-3adac2653686.png" width="700">
 
 ## The Team :man_technologist: :woman_technologist:
 
