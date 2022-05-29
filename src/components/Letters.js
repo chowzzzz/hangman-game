@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getRandomWord } from "../Words";
+// var randomWords = require("random-words");
 
-const Letters = ({ setShowFail, setShowSuccess }) => {
+const Letters = ({ setShowFail, setShowSuccess, setMistakes, mistakes }) => {
 	let maxWrongs = 6;
 	let alphabetArray = [];
 	const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -9,7 +10,6 @@ const Letters = ({ setShowFail, setShowSuccess }) => {
 
 	const [answer, setAnswer] = useState("");
 	const [guessed, setGuessed] = useState(new Set([]));
-	const [mistakes, setMistakes] = useState(0);
 	const [newLetter, setNewLetter] = useState("");
 	const [isWinner, setIsWinner] = useState(false);
 	const [gameOver, setGameOver] = useState(false);
@@ -24,6 +24,7 @@ const Letters = ({ setShowFail, setShowSuccess }) => {
 
 	useEffect(() => {
 		setAnswer(getRandomWord);
+		// setAnswer(randomWords());
 	}, []);
 
 	useEffect(() => {
@@ -62,11 +63,11 @@ const Letters = ({ setShowFail, setShowSuccess }) => {
 		setNewLetter("");
 		setMistakes(0);
 		setAnswer(getRandomWord);
-		setIsWinner(false);
-		setGameOver(false);
-
+		// setAnswer(randomWords());
 		setShowSuccess(false);
 		setShowFail(false);
+		setIsWinner(false);
+		setGameOver(false);
 	};
 
 	return (
