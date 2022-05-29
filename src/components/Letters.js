@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getRandomWord } from "../Words";
 
-const Letters = () => {
+const Letters = (props) => {
 	let maxWrongs = 6;
 	let alphabetArray = [];
 	const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -13,6 +13,14 @@ const Letters = () => {
 	const [newLetter, setNewLetter] = useState("");
 	const [isWinner, setIsWinner] = useState(false);
 	const [gameOver, setGameOver] = useState(false);
+
+	useEffect(() => {
+		props.setShowFail(gameOver);
+	}, [gameOver])
+
+	useEffect(() => {
+		props.setShowSuccess(isWinner);
+	}, [isWinner])
 
 	useEffect(() => {
 		setAnswer(getRandomWord);
@@ -54,6 +62,8 @@ const Letters = () => {
 		setNewLetter("");
 		setMistakes(0);
 		setAnswer(getRandomWord);
+		props.setShowSuccess(false);
+		props.setShowFail(false);
 	};
 
 	return (
@@ -109,20 +119,6 @@ const Letters = () => {
 					Reset
 				</button>
 			</div>
-
-			{isWinner ? (
-				// ADD ANIMATION HERE WHEN PLAYER WINS
-				<div>YIPPIE</div>
-			) : (
-				""
-			)}
-
-			{gameOver ? (
-				// ADD ANIMATION HERE WHEN PLAYER LOSES
-				<div>HO</div>
-			) : (
-				""
-			)}
 		</div>
 	);
 };
