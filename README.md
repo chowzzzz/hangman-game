@@ -40,15 +40,16 @@ We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.ne
 
 ### Hangman ☠️
 
-![hangman]()
+![photo_2022-05-29_22-41-21](https://user-images.githubusercontent.com/38778609/170875229-529747eb-dc80-4288-9936-021c93fb30d6.jpg)
 
 ### You won! 😄
 
-![win]()
+![Screen Recording 2022-05-29 at 10 28 32 PM](https://user-images.githubusercontent.com/38778609/170875485-246259da-29f3-4902-9123-e859db285bdc.gif)
 
 ### You lost! 😫
 
-![lose]()
+![Screen Recording 2022-05-29 at 10 36 55 PM](https://user-images.githubusercontent.com/38778609/170875142-0b1cea95-8f07-4491-a1a1-79b2990f9cdf.gif)
+
 
 ### Mobile
 
@@ -61,7 +62,7 @@ We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.ne
 ## The Team :man_technologist: :woman_technologist:
 
 -   [Mok Xiao Fan](https://github.com/chowzzzz)
--   [BeiNing Li](https://github.com/dearvae)
+-   [Bei Ning Li](https://github.com/dearvae)
 -   [Laksmi Sujeesh](https://github.com/lakshmi-sujeesh)
--   [Swee En](https://github.com/lse02)
--   [Jonathan](https://github.com/wutdequack)
+-   [Lim Swee En](https://github.com/lse02)
+-   [Jonathan Lee Ju-Ler](https://github.com/wutdequack)
