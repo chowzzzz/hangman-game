@@ -4,6 +4,8 @@
 
 Just a hangman game made with ReactJS.
 
+Supports mobile, tablet and desktop viewports.
+
 ## Table of Content :scroll:
 
 -   [Getting Started](#getting-started-book)
@@ -17,7 +19,7 @@ Just a hangman game made with ReactJS.
 1. Clone repo to your local machine
 2. Run `npm install`
 3. Run `npm start`
-4. The app should open up in [localhost:3000](localhost:3000)
+4. The app should open up in [http://localhost:3000](http://localhost:3000)
 
 ## Tech-stack :computer:
 
@@ -27,6 +29,8 @@ Just a hangman game made with ReactJS.
 ## Links :link:
 
 View our demo video here: [REPLACE WITH DEMO VIDEO LINK]
+
+Find the game on Github [here](https://github.com/chowzzzz/hangman-game)
 
 We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.netlify.app)!
 
@@ -45,6 +49,14 @@ We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.ne
 ### You lost! 😫
 
 ![lose]()
+
+### Mobile
+
+![mobile]()
+
+### Tablet
+
+![tablet]()
 
 ## The Team :man_technologist: :woman_technologist:
 
