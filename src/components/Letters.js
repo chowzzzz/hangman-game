@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Letters = () => {
+	let maxWrongs = 6;
 	let alphabetArray = [];
 	const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	alphabetArray = alphabets.split("");
@@ -16,6 +17,10 @@ const Letters = () => {
 		setNewLetter(letter);
 		guessed.push(letter);
 		setGuessed(guessed.slice());
+		// check if answer contains letter
+		if (!answer.toUpperCase().includes(letter.toUpperCase())) {
+			setMistakes(this.mistakes + 1);
+		}
 	};
 
 	const resetGame = () => {
@@ -25,6 +30,10 @@ const Letters = () => {
 		setMistakes(0);
 		setAnswer("cat");
 	};
+
+	if (mistakes >= maxWrongs) {
+		// game is over animation
+	}
 
 	return (
 		<div className="text-center">
