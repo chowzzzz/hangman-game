@@ -8,19 +8,41 @@ const Letters = () => {
 	alphabetArray = alphabets.split("");
 
 	const [answer, setAnswer] = useState("");
-	const [guessed, setGuessed] = useState([]);
+	const [guessed, setGuessed] = useState(new Set([]));
 	const [mistakes, setMistakes] = useState(0);
 	const [newLetter, setNewLetter] = useState("");
+	const [isWinner, setIsWinner] = useState(false);
+	const [gameOver, setGameOver] = useState(false);
 
 	useEffect(() => {
 		setAnswer(getRandomWord);
 	}, []);
 
+	useEffect(() => {
+		if (guessed.size > 0) {
+			let guessCorrect = [];
+
+			guessCorrect = answer.split("").map((letter) => {
+				if (guessed.has(letter.toUpperCase())) {
+					return letter;
+				} else {
+					return "";
+				}
+			});
+			const isCorrect = guessCorrect.join("") === answer;
+			setIsWinner(isCorrect);
+		}
+	}, [guessed, answer]);
+
+	useEffect(() => {
+		setGameOver(mistakes >= maxWrongs);
+	}, [mistakes, maxWrongs]);
+
 	const handleClickLetter = (e) => {
 		const letter = e.target.value;
 		setNewLetter(letter);
-		guessed.push(letter);
-		setGuessed(guessed.slice());
+		guessed.add(letter);
+		setGuessed(new Set(guessed));
 		// check if answer contains letter
 		if (!answer.toUpperCase().includes(letter.toUpperCase())) {
 			setMistakes(mistakes + 1);
@@ -28,22 +50,21 @@ const Letters = () => {
 	};
 
 	const resetGame = () => {
-		setGuessed([]);
+		setGuessed(new Set([]));
 		setNewLetter("");
 		setMistakes(0);
 		setAnswer(getRandomWord);
 	};
 
-	if (mistakes >= maxWrongs) {
-		// game is over animation
-	}
-
 	return (
 		<div className="text-center">
-			<h4>Hint: TikTok Youth Camp 2022</h4>
+			<h4 className="mb-3">Hint: TikTok Youth Camp 2022</h4>
+			<h6>
+				Wrong Guesses: {mistakes} / {maxWrongs}
+			</h6>
 			<h1 className="mb-5">
 				{answer.split("").map((letter, i) =>
-					guessed.includes(letter.toUpperCase()) ? (
+					guessed.has(letter.toUpperCase()) ? (
 						<span className="letter" key={i}>
 							&nbsp;{letter.toUpperCase()}&nbsp;
 							{newLetter ? (
@@ -76,7 +97,7 @@ const Letters = () => {
 						key={a}
 						value={a}
 						onClick={handleClickLetter}
-						disabled={guessed.includes(a)}
+						disabled={guessed.has(a) || gameOver || isWinner}
 					>
 						{a}
 					</button>
@@ -88,6 +109,20 @@ const Letters = () => {
 					Reset
 				</button>
 			</div>
+
+			{isWinner ? (
+				// ADD ANIMATION HERE WHEN PLAYER WINS
+				<div>YIPPIE</div>
+			) : (
+				""
+			)}
+
+			{gameOver ? (
+				// ADD ANIMATION HERE WHEN PLAYER LOSES
+				<div>HO</div>
+			) : (
+				""
+			)}
 		</div>
 	);
 };
