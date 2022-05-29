@@ -89,8 +89,8 @@
 
 .container {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width: 168px;
+	height: 168px;
 	margin: auto;
 	padding: 10px;
 }
@@ -104,8 +104,9 @@ p {
 }
 
 .face {
-	width: 150px;
-	height: 150px;
+
+	width: 168px;
+	height: 168px;
 	border: 9px solid #bdc3c7;
 	border-radius: 50%;
 	animation: face 7s infinite;
@@ -131,8 +132,8 @@ p {
 	background-color: #3498db;
 	height: 0px;
 	width: 45px;
-	top: 62px;
-	left: 29px;
+	top: 80px;
+	left: 40px;
 	border-bottom-left-radius: 50%;
 	animation: tear 7s infinite;
 	animation-delay: 2s;
@@ -143,8 +144,8 @@ p {
 	background-color: #3498db;
 	height: 0px;
 	width: 45px;
-	top: 62px;
-	left: 98px;
+	top: 80px;
+	left: 104px;
 	border-bottom-right-radius: 50%;
 	animation: tear 7s infinite;
 	animation-delay: 2s;
@@ -271,4 +272,11 @@ p {
 
 .letters {
 	margin-top: 50px;
+}
+
+.fail-text {
+	text-align: center;
+	font-weight: 500;
+	line-height: 1.2;
+	font-size: 43px;
 }
