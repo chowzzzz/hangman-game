@@ -28,9 +28,9 @@ Supports mobile, tablet and desktop viewports.
 
 ## Links :link:
 
-View our demo video here: [REPLACE WITH DEMO VIDEO LINK]
+View our demo video [here](https://www.youtube.com/watch?v=ED0JGVvEelw).
 
-Find the game on Github [here](https://github.com/chowzzzz/hangman-game)
+Find the game on Github [here](https://github.com/chowzzzz/hangman-game).
 
 We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.netlify.app)!
 
