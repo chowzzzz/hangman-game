@@ -63,6 +63,6 @@ We also hosted our game on Netlify [here](https://hangman-game-tiktokcamp2022.ne
 
 -   [Mok Xiao Fan](https://github.com/chowzzzz)
 -   [Bei Ning Li](https://github.com/dearvae)
--   [Laksmi Sujeesh](https://github.com/lakshmi-sujeesh)
+-   [Lakshmi Sujeesh](https://github.com/lakshmi-sujeesh)
 -   [Lim Swee En](https://github.com/lse02)
 -   [Jonathan Lee Ju-Ler](https://github.com/wutdequack)
