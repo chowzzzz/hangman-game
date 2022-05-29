@@ -14,12 +14,12 @@ function App() {
 		<div className="App my-5">
 			<h1 className="text-center">Hangman</h1>
 			{!showFail && !showSuccess &&
-				<Hangman mistakes={mistakes}/>
+				<Hangman mistakes={mistakes} />
 			}
 			{showFail && <Fail />}
 			{showSuccess && <Win />}
 			<div className="letters">
-				<Letters setShowFail={setShowFail} setShowSuccess={setShowSuccess} setMistakes={setMistakes}/>
+				<Letters setShowFail={setShowFail} setShowSuccess={setShowSuccess} setMistakes={setMistakes} />
 			</div>
 		</div>
 	);
