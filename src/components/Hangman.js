@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hangman = () => {
+const Hangman = ({mistakes}) => {
 	return (
 		<div className="text-center">
 			<svg
@@ -50,15 +50,15 @@ const Hangman = () => {
 						/>
 					</g>
 					<g id="man">
-						<circle
+						{mistakes > 0 && <circle
 							id="head"
 							cx="195"
 							cy="141"
 							r="18.5"
 							stroke="black"
 							strokeWidth="5"
-						/>
-						<line
+						/>}
+						{mistakes > 1 && <line
 							id="body"
 							x1="195.5"
 							y1="162"
@@ -66,8 +66,8 @@ const Hangman = () => {
 							y2="228"
 							stroke="black"
 							strokeWidth="5"
-						/>
-						<line
+						/>}
+						{mistakes > 4 && <line
 							id="leftLeg"
 							x1="194.768"
 							y1="226.768"
@@ -75,8 +75,8 @@ const Hangman = () => {
 							y2="251.768"
 							stroke="black"
 							strokeWidth="5"
-						/>
-						<line
+						/>}
+						{mistakes > 5 && <line
 							id="rightLeg"
 							y1="-2.5"
 							x2="35.3553"
@@ -84,8 +84,8 @@ const Hangman = () => {
 							transform="matrix(0.707107 0.707107 0.707107 -0.707107 198 225)"
 							stroke="black"
 							strokeWidth="5"
-						/>
-						<line
+						/>}
+						{mistakes > 2 && <line
 							id="leftArm"
 							x1="196.232"
 							y1="185.768"
@@ -93,8 +93,8 @@ const Hangman = () => {
 							y2="164.768"
 							stroke="black"
 							strokeWidth="5"
-						/>
-						<line
+						/>}
+						{mistakes > 3 && <line
 							id="rightArm"
 							y1="-2.5"
 							x2="29.6985"
@@ -102,7 +102,7 @@ const Hangman = () => {
 							transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 193 184)"
 							stroke="black"
 							strokeWidth="5"
-						/>
+						/>}
 					</g>
 				</g>
 			</svg>
