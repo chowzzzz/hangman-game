@@ -1,42 +1,35 @@
 import React, { useEffect, useState } from "react";
-// import { getRandomWord } from "../Words";
+import { getRandomWord } from "../Words";
+// var randomWords = require("random-words");
 
-const Letters = (props) => {
+const Letters = ({ setShowFail, setShowSuccess, setMistakes, mistakes, setWord }) => {
 	let maxWrongs = 6;
 	let alphabetArray = [];
-	var randomWords = require('random-words');
-
 	const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	alphabetArray = alphabets.split("");
 
 	const [answer, setAnswer] = useState("");
 	const [guessed, setGuessed] = useState(new Set([]));
-	const [mistakes, setMistakes] = useState(0);
 	const [newLetter, setNewLetter] = useState("");
 	const [isWinner, setIsWinner] = useState(false);
 	const [gameOver, setGameOver] = useState(false);
 
 	useEffect(() => {
-		props.setMistakes(mistakes);
-	}, [mistakes])
+		setShowFail(gameOver);
+	}, [gameOver, setShowFail]);
 
 	useEffect(() => {
-		props.setShowFail(gameOver);
-	}, [gameOver])
+		setShowSuccess(isWinner);
+	}, [isWinner, setShowSuccess]);
 
 	useEffect(() => {
-		props.setShowSuccess(isWinner);
-	}, [isWinner])
-
-	useEffect(() => {
-		// setAnswer(getRandomWord);
-		setAnswer(randomWords());
-
+		setAnswer(getRandomWord);
+		// setAnswer(randomWords());
 	}, []);
 
 	useEffect(() => {
 
-		props.setWord(answer)
+		setWord(answer)
 
 	}, [answer]);
 
@@ -75,10 +68,12 @@ const Letters = (props) => {
 		setGuessed(new Set([]));
 		setNewLetter("");
 		setMistakes(0);
-		// setAnswer(getRandomWord);
-		setAnswer(randomWords());
-		props.setShowSuccess(false);
-		props.setShowFail(false);
+		setAnswer(getRandomWord);
+		// setAnswer(randomWords());
+		setShowSuccess(false);
+		setShowFail(false);
+		setIsWinner(false);
+		setGameOver(false);
 	};
 
 	return (

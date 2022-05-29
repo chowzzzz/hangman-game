@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from 'react'
+import { useState } from "react";
 import Hangman from "./components/Hangman";
 import Letters from "./components/Letters";
 import Fail from "./components/Fail";
@@ -19,7 +19,7 @@ function App() {
 			{showFail && <Fail word={word} />}
 			{showSuccess && <Win />}
 			<div className="letters">
-				<Letters setWord={setWord} setShowFail={setShowFail} setShowSuccess={setShowSuccess} setMistakes={setMistakes} />
+				<Letters setWord={setWord} setShowFail={setShowFail} setShowSuccess={setShowSuccess} setMistakes={setMistakes} mistakes={mistakes} />
 			</div>
 		</div>
 	);
