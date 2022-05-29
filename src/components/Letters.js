@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getRandomWord } from "../Words";
 
 const Letters = () => {
 	let maxWrongs = 6;
@@ -6,11 +7,14 @@ const Letters = () => {
 	const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	alphabetArray = alphabets.split("");
 
-	// TODO: REPLACE THIS WITH RANDOM WORD
-	const [answer, setAnswer] = useState("hello");
+	const [answer, setAnswer] = useState("");
 	const [guessed, setGuessed] = useState([]);
 	const [mistakes, setMistakes] = useState(0);
 	const [newLetter, setNewLetter] = useState("");
+
+	useEffect(() => {
+		setAnswer(getRandomWord);
+	}, []);
 
 	const handleClickLetter = (e) => {
 		const letter = e.target.value;
@@ -19,16 +23,15 @@ const Letters = () => {
 		setGuessed(guessed.slice());
 		// check if answer contains letter
 		if (!answer.toUpperCase().includes(letter.toUpperCase())) {
-			setMistakes(this.mistakes + 1);
+			setMistakes(mistakes + 1);
 		}
 	};
 
 	const resetGame = () => {
-		// TODO: REPLACE THIS WITH RANDOM WORD
 		setGuessed([]);
 		setNewLetter("");
 		setMistakes(0);
-		setAnswer("cat");
+		setAnswer(getRandomWord);
 	};
 
 	if (mistakes >= maxWrongs) {
@@ -37,6 +40,7 @@ const Letters = () => {
 
 	return (
 		<div className="text-center">
+			<h4>Hint: TikTok Youth Camp 2022</h4>
 			<h1 className="mb-5">
 				{answer.split("").map((letter, i) =>
 					guessed.includes(letter.toUpperCase()) ? (
